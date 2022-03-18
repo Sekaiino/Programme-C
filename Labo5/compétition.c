@@ -36,9 +36,7 @@ int main()
         printf("\n");
         printf("Journée %d\n", j);
 
-        for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee; k++, l--)
-        {
-            for (int i = nbEquipes-1; i > 0; i--)
+        for (int i = nbEquipes-1; i > 0; i--)
             {
                 nomsEquipes[i] = nomsEquipes[i-1];
                 if(i==1)
@@ -46,6 +44,9 @@ int main()
                     nomsEquipes[1] = f;
                 }
             }
+
+        for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee; k++, l--)
+        {
             printf("%c - %c\n", nomsEquipes[k], nomsEquipes[l]);
         }
     }
