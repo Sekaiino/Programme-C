@@ -42,10 +42,7 @@ int main()
                 {
                     nomsEquipes[i+1]=nomsEquipes[nbEquipes];
                 }
-                else
-                {
-                    nomsEquipes[i+1]=nomsEquipes[i];
-                }
+                nomsEquipes[i+1]=nomsEquipes[i];
             }
             if (k == 2)
             {
