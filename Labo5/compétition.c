@@ -25,6 +25,7 @@ int main()
     for (int i = 0, nomEquipe = 'A'; i < nbEquipes; i++, nomEquipe++)
     {
         nomsEquipes[i] = nomEquipe;
+        printf("%c", nomsEquipes[i]);
     }
     
     nbJournees = nbEquipes - 1;
