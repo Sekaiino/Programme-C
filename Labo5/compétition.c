@@ -40,11 +40,11 @@ int main()
             {
                 if (i == nbEquipes-1)
                 {
-                    nomsEquipes[1]=nomsEquipes[i]
+                    nomsEquipes[1]=nomsEquipes[i];
                 }
                 else
                 {
-                    nomsEquipes[i+1]=nomsEquipes[i]
+                    nomsEquipes[i+1]=nomsEquipes[i];
                 }
             }
         }
