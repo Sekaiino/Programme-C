@@ -47,7 +47,7 @@ int main()
                     nomsEquipes[i+1]=nomsEquipes[i];
                 }
             }
-            printf("%d - %d\n", nomsEquipes[k], nomsEquipes[l]);
+            printf("%c - %c\n", nomsEquipes[k], nomsEquipes[l]);
         }
     }
 }
