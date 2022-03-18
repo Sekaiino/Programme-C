@@ -32,6 +32,7 @@ int main()
 
     for (int j = 1; j <= nbJournees; j++)
     {
+        printf("\n");
         printf("Journée %d\n", j);
 
         for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee; k++, l--)
@@ -47,14 +48,7 @@ int main()
                     nomsEquipes[i] = nomsEquipes[i - 1];
                 }
             }
-            if (k == 2)
-            {
-                printf("%c - %c\n\n", nomsEquipes[k], nomsEquipes[l]);
-            }
-            else
-            {
-                printf("%c - %c\n", nomsEquipes[k], nomsEquipes[l]);
-            }
+            printf("%c - %c\n", nomsEquipes[k], nomsEquipes[l]);
         }
     }
 }
