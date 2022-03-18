@@ -38,13 +38,11 @@ int main()
         {
             for (int i = nbEquipes - 1; i < nbEquipes; i--)
             {
-                if (i == nbEquipes-1)
+                nomsEquipes[i]=nomsEquipes[i+1];
+                
+                if (nomsEquipes[i] == nbEquipes)
                 {
                     nomsEquipes[1]=nomsEquipes[i];
-                }
-                else
-                {
-                    nomsEquipes[i]=nomsEquipes[i-1];
                 }
             }
             printf("%c - %c\n", nomsEquipes[k], nomsEquipes[l]);
