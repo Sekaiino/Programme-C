@@ -32,15 +32,15 @@ int main()
 
     for (int j = 1; j <= nbJournees; j++)
     {
-        printf("Journée %d\n", j);
+        printf("Journée %d\n\n", j);
 
         for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee; k++, l--)
         {
-            for (int i = nbEquipes - 1; i > 0; i--)
+            for (int i = nbEquipes - 1; i >= 0; i--)
             {
-                if (i == 1)
+                if (i == 0)
                 {
-                    nomsEquipes[i]=nomsEquipes[nbEquipes];
+                    nomsEquipes[i+1]=nomsEquipes[nbEquipes];
                 }
                 else
                 {
