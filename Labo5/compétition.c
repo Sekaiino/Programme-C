@@ -36,7 +36,7 @@ int main()
     {
         f = nomsEquipes[i];
         nomsEquipes[i] = nomsEquipes[posAleat];
-        nomsEquipes[posAleat] = nomsEquipes[i];
+        nomsEquipes[posAleat] = f;
     }
     
     nbJournees = nbEquipes - 1;
