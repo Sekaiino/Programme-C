@@ -30,5 +30,23 @@ int main()
     nbJournees = nbEquipes - 1;
     nbMatchsParJournee = nbEquipes / 2;
 
-    
+    for (int j = 1; j <= nbJournees; j++)
+    {
+        printf("Journée %d\n", j);
+
+        for (int k = 0; k <= nbMatchsParJournee; k++)
+        {
+            for (int i = 1; i < nbEquipes; i ++)
+            {
+                if (i == nbEquipes-1)
+                {
+                    nomsEquipes[1]=nomsEquipes[i]
+                }
+                else
+                {
+                    nomsEquipes[i+1]=nomsEquipes[i]
+                }
+            }
+        }
+    }
 }
