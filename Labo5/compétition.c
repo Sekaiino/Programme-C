@@ -36,13 +36,16 @@ int main()
 
         for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee; k++, l--)
         {
-            for (int i = nbEquipes - 1; i >= 0; i--)
+            for (int i = nbEquipes; i > 0; i--)
             {
-                if (i == 0)
+                if (i == 1)
                 {
-                    nomsEquipes[i+1]=nomsEquipes[nbEquipes];
+                    nomsEquipes[i] = nomsEquipes[nbEquipes];
                 }
-                nomsEquipes[i+1]=nomsEquipes[i];
+                else
+                {
+                    nomsEquipes[i] = nomsEquipes[i - 1];
+                }
             }
             if (k == 2)
             {
