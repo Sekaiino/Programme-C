@@ -10,7 +10,7 @@ int main()
 {
 	setlocale(LC_ALL, "");
 
-    char nomsEquipes[NB_MAX_EQUIPES];
+    char nomsEquipes[NB_MAX_EQUIPES], f;
     int nbEquipes, nbJournees, nbMatchsParJournee;
 
     printf("Nombre d’équipes (de 2 à 22) ? ");
@@ -32,22 +32,17 @@ int main()
 
     for (int j = 1; j <= nbJournees; j++)
     {
+        f = nomsEquipes[nbEquipes - 1];
         printf("\n");
         printf("Journée %d\n", j);
 
         for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee; k++, l--)
         {
-            for (int i = nbEquipes; i > 0; i--)
+            for (int i = nbEquipes-1; i > 1; i--)
             {
-                if (i == 1)
-                {
-                    nomsEquipes[i] = nomsEquipes[nbEquipes];
-                }
-                else
-                {
-                    nomsEquipes[i] = nomsEquipes[i - 1];
-                }
+                nomsEquipes[i] = nomsEquipes[i-1];
             }
+            nomsEquipes[1] = f;
             printf("%c - %c\n", nomsEquipes[k], nomsEquipes[l]);
         }
     }
