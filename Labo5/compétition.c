@@ -38,11 +38,14 @@ int main()
 
         for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee; k++, l--)
         {
-            for (int i = nbEquipes-1; i > 1; i--)
+            for (int i = nbEquipes-1; i > 0; i--)
             {
                 nomsEquipes[i] = nomsEquipes[i-1];
+                if(i==1)
+                {
+                    nomsEquipes[1] = f;
+                }
             }
-            nomsEquipes[1] = f;
             printf("%c - %c\n", nomsEquipes[k], nomsEquipes[l]);
         }
     }
