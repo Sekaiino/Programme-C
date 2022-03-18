@@ -34,7 +34,7 @@ int main()
     {
         printf("Journée %d\n", j);
 
-        for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee || l > nbMatchsParJournee - 1; k++, l--)
+        for (int k = 0, l = nbEquipes - 1; k < nbMatchsParJournee; k++, l--)
         {
             for (int i = 1; i < nbEquipes; i ++)
             {
