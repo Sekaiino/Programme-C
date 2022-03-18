@@ -3,6 +3,11 @@
 #include <stdio.h>
 #include <locale.h>
 #include <ctype.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdbool.h>
+
+int nombreAleatoire(int min, int max);
 
 #define NB_MAX_EQUIPES 22
 
@@ -12,6 +17,7 @@ int main()
 
     char nomsEquipes[NB_MAX_EQUIPES], f;
     int nbEquipes, nbJournees, nbMatchsParJournee;
+    int posAleat = nombreAleatoire(0, nbEquipes - 1);
 
     printf("Nombre d’équipes (de 2 à 22) ? ");
     scanf("%d", &nbEquipes);
@@ -25,6 +31,12 @@ int main()
     for (int i = 0, nomEquipe = 'A'; i < nbEquipes; i++, nomEquipe++)
     {
         nomsEquipes[i] = nomEquipe;
+    }
+    for (int i = 0; i < nbEquipes; i++)
+    {
+        f = nomsEquipes[i];
+        nomsEquipes[i] = nomsEquipes[posAleat];
+        nomsEquipes[posAleat] = nomsEquipes[i];
     }
     
     nbJournees = nbEquipes - 1;
@@ -50,4 +62,14 @@ int main()
             printf("%c - %c\n", nomsEquipes[k], nomsEquipes[l]);
         }
     }
+}
+int nombreAleatoire(int min, int max)
+{
+    static bool init = false;
+    if (!init)
+    {
+        srand(time(NULL));
+        init = true;
+    }
+    return rand() % (max - min + 1) + min;
 }
