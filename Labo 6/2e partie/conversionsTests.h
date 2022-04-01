@@ -3,7 +3,7 @@
 
 #include "unit.h"
 
-#define __TEST_EST_UNITE_ANGLO       0
+#define __TEST_EST_UNITE_ANGLO       1
 #define __TEST_CONVERTIR_ANGLO_EN_MM 0
 
 #if __TEST_EST_UNITE_ANGLO
