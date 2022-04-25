@@ -36,4 +36,6 @@ void afficherDate(int jour, int mois, int annee);
 
 bool estBissextile(int annee);
 
+int dernierJourDuMois(int mois, int annee);
+
 #endif 
