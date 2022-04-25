@@ -38,4 +38,6 @@ bool estBissextile(int annee);
 
 int dernierJourDuMois(int mois, int annee);
 
+bool dateValide(int jour, int mois, int annee);
+
 #endif 

@@ -86,5 +86,15 @@ int dernierJourDuMois(int mois, int annee)
 }
 bool dateValide(int jour, int mois, int annee)
 {
-	
+	if(annee > 0 && mois > 0 && mois <= 12)
+	{
+		int dernier_jour = dernierJourDuMois(mois, annee);
+
+		if(jour > 0 && jour <= dernier_jour)
+		{
+			return true;
+		}
+		else {return false;}
+	}
+	else {return false;}
 }

@@ -16,5 +16,10 @@ int main()
     printf("La date du jour est le ");
     afficherDate(jour, mois, annee);
     
-
+    while(true)
+    {
+        printf("Date (jj/mm/aaaa) ? ");
+        scanf("%d/%d/%d", &jour, &mois, &annee);
+    }
+    
 }
