@@ -50,3 +50,19 @@ void afficherDate(int jour, int mois, int annee)
 {
 	printf("%02d/%02d/%02d", jour, mois, annee);
 }
+bool estBissextile(int annee)
+{
+	if (annee % 400 == 0 || annee % 4 == 0 && annee % 100 != 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+
+	}
+}
+int dernierJourDuMois(int mois, int annee)
+{
+	
+}

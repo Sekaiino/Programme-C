@@ -3,7 +3,7 @@
 
 #include "unit.h"
 
-#define __TEST_EST_BISSEXTILE       0
+#define __TEST_EST_BISSEXTILE       1
 #define __TEST_DERNIER_JOUR_DU_MOIS 0
 #define __TEST_DATE_VALIDE          0
 

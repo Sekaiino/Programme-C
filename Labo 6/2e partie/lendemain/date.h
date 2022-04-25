@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <time.h>
+#include <stdbool.h>
 
 /// <summary>Retourne la valeur du jour du mois de la date actuelle.</summary>
 /// <returns>La valeur du jour du mois comprise entre 1 & 31.</returns>
@@ -32,5 +33,7 @@ void dateAjd(int *jour, int *mois, int *annee);
 /// <param name="mois">La valeur du mois.</param>
 /// <param name="annee">La valeur de l'annee.</param>
 void afficherDate(int jour, int mois, int annee);
+
+bool estBissextile(int annee);
 
 #endif 
